@@ -21,22 +21,22 @@ to add:
 camera, hmi
 
 ### Paxton Coghlin
-<a href="\..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Paxton\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
+<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Paxton\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
  - Team Lead
  - PLC Lead
 
 ### Grant Maddock
-<a href="\..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Grant\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
+<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Grant\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
  - Robotics Lead
 
 ### Josh Le Blanc
-<a href="\..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Josh\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
+<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Josh\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
  - Mechanical Lead
 
 ### Jaidan Mitchell
-<a href="\..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Jaidan\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
+<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Jaidan\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
  - Safety Lead
 
 ### Rushawn Waite
-<a href="\..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Shawn\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
+<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Shawn\Portrait.JPG" alt="Paxton Coghlin" style="height:360px;"></a>
  - Electrical Lead
