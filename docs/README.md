@@ -9,12 +9,13 @@ At Humber College, the capstone project in the Electromechanical Engineering Tec
 The system features an HMI to run the system, and pulls an "order" from a spreadsheet to generate coil properties like inductance, current limits, or size restrictions.
 
 ## Mechanical
-**See drawings [here](\..\ENGINEERING\MECHANICAL.pdf)**
+**See drawings [here](/../ENGINEERING/MECHANICAL.pdf)**
+
 The mechanical design of the inductor winding cell is built on an aluminum extrusion frame for modularity and ease of assembly. A custom 3D-printed winding assembly driven by a stepper servo motor handles the coil winding process. DC motors feed wire through steel brake lines, which guide it around the lathe chuck like structure. A FANUC robot moves the inductors between stations, while hot glue is applied to secure the windings. The system integrates all components into a compact, efficient layout optimized for automated coil production.
 
 
 ## Electrical
-**See drawings [here](\..\ENGINEERING\ELECTRICAL.pdf)**
+**See drawings [here](..\ENGINEERING\ELECTRICAL.pdf)**
 
 ## The Team
 to add:
