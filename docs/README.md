@@ -3,7 +3,7 @@
 
 At Humber College, the capstone project in the Electromechanical Engineering Technology program is a two-semester team-based project where students design and build real-world automation systems. Our project involves designing and building an automated inductor winding cell using a FANUC robot, a Cognex vision system, and SICK safety scanners. The goal is to streamline the production of inductors by automating the precise placement and winding of copper with an air core.
 
- - FANUC Robot: Handles inductor loading/unloading and wire positioning.
+ - FANUC CR-4iA: Handles inductor loading/unloading and wire positioning.
  - Cognex Camera: Verifies wire orientation and alignment before winding, ensuring quality control.
  - SICK Safety Scanners: Provide perimeter safety monitoring and zone control, allowing safe human interaction during operation and maintenance.
 
@@ -36,18 +36,11 @@ This PLC program enables a flexible, fully automated process that adjusts to dif
 ## HMI Design
 **See Design [here](../ENGINEERING/HMIDesign.pdf)**
 
-The HMI is beautiful
-
-
+This HMI was designed with a strong focus on clarity, safety, and operator efficiency. The interface features a clean, intuitive layout with high-contrast visuals and standardized navigation, ensuring critical information like alarms, machine status, and production metrics are immediately visible. Alarm management is prioritized through a tiered system that highlights urgent issues and provides clear operator instructions. The HMI includes role-based access, preventing unauthorized changes while allowing technicians and engineers deeper access for diagnostics. Real-time trends, historical data, and customizable dashboards support both day-to-day operations and long-term optimization. Built with modular, scalable components, the design is easy to maintain and expand. Remote access and mobile compatibility offer flexibility for on-the-go monitoring, making this HMI both robust and user-friendly in a modern industrial environment.
 
 ## The Team
 
-Although there are "designations" under all of our photos state a job, that is just what we focused on. In reality, we all kinda touched everything.
-
-
-
-
-
+Although there are "designations" under all of our photos that state a job, that is just what we focused on. In reality, we all ended up dealing with everything.
 
 ### Paxton Coghlin
 <a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Paxton\Portrait.JPG" alt="Paxton Coghlin" style="height:411px;"></a>
@@ -102,6 +95,7 @@ Although there are "designations" under all of our photos state a job, that is j
 </p>
 
  - Electrical Lead
+ - Robotics Assistant
 
 ### Grant Maddock
 <a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Grant\Portrait.JPG" alt="Grant Maddock" style="height:411px;"></a>
@@ -137,3 +131,6 @@ Although there are "designations" under all of our photos state a job, that is j
 
  - Safety Lead
 
+## Extra Resources
+
+The class that this project is for requires some more documentation to be created for the class. This includes a video showing off our project, and a final report loosely based on the OACETT report guidelines
