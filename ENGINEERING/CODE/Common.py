@@ -4,14 +4,14 @@
 import time
 
 # ipAddress = '192.168.1.200' # plc ip
-ipAddress = '192.168.1.13' # plc ip
+ipAddress = '192.168.1.200' # plc ip
 RetryTime = 1 # time to wait before retrying PLC read/write in seconds. Not the communication timeout
 path = 'C:/Users/paxto/OneDrive/Desktop/LocalProjects/InductorWinding/ENGINEERING/CODE/' # path that contains PendingOrders and CompleteOrders folders
 
  # Tag names in PLC
 ReadyTag = 'Ready'
 DoneTag = 'Done'
-CommsDoneTag = 'CommsDone' # this code sets this true when it is done sending data
+CommsDoneTag = 'InductorSent' # this code sets this true when it is done sending data
 
 
 def log (Message): # Write to log file
