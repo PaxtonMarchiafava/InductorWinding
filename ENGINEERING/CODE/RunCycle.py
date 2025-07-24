@@ -33,6 +33,9 @@ def GetOrderFile(): # returns path to oldest PendingOrder file
 
   PendingOrders = os.listdir(Common.path + 'PendingOrders/') # list of all pending orders
 
+  if not PendingOrders: # if no pending orders, return None
+    return None
+
   old = os.path.getmtime(Common.path + 'PendingOrders/' + PendingOrders[0])
   oldestFile = PendingOrders[0]
 
@@ -66,6 +69,12 @@ def SendInductor (plc, inductor): # waits for ready, sends inductor values to PL
 with PLC() as CTRL:
   CTRL.IPAddress = Common.ipAddress
   orderPath = GetOrderFile()
+
+  while orderPath is None: # wait for order file
+    print('Waiting for order file...')
+    time.sleep(2)
+    orderPath = GetOrderFile()
+
   with open(orderPath, 'r') as OrderFile:
     log('Opened file:\t\t\t\t\t' + orderPath)
     header = next(OrderFile)  # Skip the header line
