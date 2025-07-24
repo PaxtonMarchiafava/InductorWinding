@@ -18,9 +18,10 @@ CommsDoneTag = 'InductorSent' # this code sets this true when it is done sending
 
 
 def log (Message): # Write to log file
-  with open('InductorWinding/ENGINEERING/CODE/log.txt', "a") as f:
+  with open(path + 'log.txt', "a") as f:
     f.write(Message + "\n")
   f.close()
+
 
 def GetPLCVal(plc, tag): # read until value
   while (True):
