@@ -1,7 +1,11 @@
 
 # Inductor Winding
 
-At Humber College, the capstone project in the Electromechanical Engineering Technology program is a two-semester team-based project where students design and build real-world automation systems. Our project involves designing and building an automated inductor winding cell using a FANUC robot, a Cognex vision system, and SICK safety scanners. The goal is to streamline the production of inductors by automating the precise placement and winding of copper with an air core.
+At Humber College, the capstone project in the Electromechanical Engineering Technology program is a two-semester team-based project where students design and build real-world automation systems. Our project involves designing and building an automated inductor winding cell using a FANUC robot, a Cognex vision system, and some custom hardware to feed wire and wind the coil. The goal is to streamline the production of inductors by automating the precise placement and winding of copper with an air core.
+
+---
+The Inductor Coil Winding Project is a fully automated system for winding inductors with high precision and efficiency. The machine ensures consistent coil quality and accelerates production by reducing human intervention and integrating advanced programmable controls. Key features include an automated winding mechanism, customizable input parameters, real-time quality monitoring, and a user-friendly interface.
+---
 
  - FANUC CR-4iA: Handles inductor loading/unloading and wire positioning.
  - Cognex Camera: Verifies wire orientation and alignment before winding, ensuring quality control.
@@ -81,7 +85,7 @@ Although there are "designations" under all of our photos that state a job, that
  - Safety Assistant
 
 ### Rushawn Waite
-<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Shawn\Portrait.JPG" alt="Rushawn Waite" style="height:411px;"></a>
+<a href="..\TeamInfo\Shawn\Resume.pdf"><img src="..\TeamInfo\Shawn\Portrait.JPG" alt="Rushawn Waite" style="height:411px;"></a>
 <p>
   <a href="mailto:paxtoncoghlin@gmail.com" title="Gmail">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail" />

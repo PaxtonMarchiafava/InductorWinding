@@ -59,6 +59,9 @@ def SendInductor (plc, inductor): # waits for ready, sends inductor values to PL
   WaitForVal(CTRL, Common.DoneTag, True)
   log('Coil wind time:\t\t\t\t' + str((CTRL.GetPLCTime(True) - CoilStartTime) * 0.001) + ' ms') # log cycle time
 
+  SendPLCVal(plc, Common.CommsDoneTag, False) # reset value for later
+
+
 
 with PLC() as CTRL:
   CTRL.IPAddress = Common.ipAddress
