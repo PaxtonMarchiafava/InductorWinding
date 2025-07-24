@@ -6,7 +6,10 @@ import time
 # ipAddress = '192.168.1.146' # test plc ip
 ipAddress = '192.168.1.200' # plc ip
 RetryTime = 1 # time to wait before retrying PLC read/write in seconds. Not the communication timeout
-path = 'C:/Users/paxto/OneDrive/Desktop/LocalProjects/InductorWinding/ENGINEERING/CODE/' # path that contains PendingOrders and CompleteOrders folders
+
+# path that contains PendingOrders and CompleteOrders folders
+# path = 'C:/Users/paxto/OneDrive/Desktop/LocalProjects/InductorWinding/ENGINEERING/CODE/'
+path = 'C:/Users/Inductor Winding/Desktop/'
 
  # Tag names in PLC
 ReadyTag = 'Ready'
