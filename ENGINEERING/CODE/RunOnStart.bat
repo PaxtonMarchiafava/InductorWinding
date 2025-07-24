@@ -1,3 +1,3 @@
 @echo off
-cd "C:\Path\to\folder"
-python -i my_script.py
+cd "C:\Users\Inductor Winding\Documents\GitHub\InductorWinding\ENGINEERING\CODE"
+python -i RunCycle.py
