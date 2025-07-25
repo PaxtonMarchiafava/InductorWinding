@@ -17,10 +17,10 @@ ReadyTag = localBase + 'Ready'
 DoneTag = localBase + 'Done'
 
 inductance = 'Coil.Inductance'
-maxDia = 'Coil.MaxDia'
+Diameter = 'Coil.Diameter'
 current = 'Coil.Current'
 
-CommsDoneTag = 'InductorSent' # this code sets this true when it is done sending data
+CommsDoneTag = localBase + 'InductorSent' # this code sets this true when it is done sending data
 
 
 def log (Message): # Write to log file

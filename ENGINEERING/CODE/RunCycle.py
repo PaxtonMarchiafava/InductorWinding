@@ -7,9 +7,9 @@ import os
 
 
 class Inductor:
-  def __init__(self, Inductance, MaxDia, Current): # mH, mm, mA
+  def __init__(self, Inductance, Diameter, Current): # mH, mm, mA
     self.Inductance = Inductance
-    self.MaxDia = MaxDia
+    self.Diameter = Diameter
     self.Current = Current
 
 def SendPLCVal(plc, tag, value): # sends value to tag on PLC
@@ -52,13 +52,13 @@ def SendInductor (plc, inductor): # waits for ready, sends inductor values to PL
   WaitForVal(plc, Common.ReadyTag, True)
   
   SendPLCVal(plc, Common.inductance, inductor.Inductance)
-  SendPLCVal(plc, Common.maxDia, inductor.MaxDia)
+  SendPLCVal(plc, Common.Diameter, inductor.Diameter)
   SendPLCVal(plc, Common.current, inductor.Current)
 
   SendPLCVal(plc, Common.CommsDoneTag, True)
   CoilStartTime = CTRL.GetPLCTime(True)
 
-  log('Sent Inductor:\t\t\t\t' + str(inductor.Inductance) + ' mH, ' + str(inductor.MaxDia) + ' mm, ' + str(inductor.Current) + ' mA')
+  log('Sent Inductor:\t\t\t\t' + str(inductor.Inductance) + ' mH, ' + str(inductor.Diameter) + ' mm, ' + str(inductor.Current) + ' mA')
   WaitForVal(CTRL, Common.DoneTag, True)
   log('Coil wind time:\t\t\t\t' + str((CTRL.GetPLCTime(True) - CoilStartTime) * 0.001) + ' ms') # log cycle time
 
@@ -81,9 +81,9 @@ with PLC() as CTRL:
     print(header.strip())
     for line in OrderFile:
       print(line)
-      Inductance, MaxDia, Current = line.strip().split(',') # get values from line
-      inductor = Inductor(int(Inductance), int(MaxDia), int(Current))
-      log('Read Inductor:\t\t\t\t' + str(inductor.Inductance) + ' mH, ' + str(inductor.MaxDia) + ' mm, ' + str(inductor.Current) + ' mA')
+      Inductance, Diameter, Current = line.strip().split(',') # get values from line
+      inductor = Inductor(int(Inductance), int(Diameter), int(Current))
+      log('Read Inductor:\t\t\t\t' + str(inductor.Inductance) + ' mH, ' + str(inductor.Diameter) + ' mm, ' + str(inductor.Current) + ' mA')
 
       SendInductor(CTRL, inductor)
 
