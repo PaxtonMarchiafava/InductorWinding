@@ -12,12 +12,13 @@ RetryTime = 1 # time to wait before retrying PLC read/write in seconds. Not the 
 path = 'C:/Users/Inductor Winding/Desktop/'
 
  # Tag names in PLC
-ReadyTag = 'Ready'
+ReadyTag = 'MainProgram.Ready'
 DoneTag = 'Done'
 CommsDoneTag = 'InductorSent' # this code sets this true when it is done sending data
 
 
 def log (Message): # Write to log file
+
   with open(path + 'log.txt', "a") as f:
     f.write(Message + "\n")
   f.close()
