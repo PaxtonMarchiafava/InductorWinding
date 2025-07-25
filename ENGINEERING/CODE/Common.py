@@ -12,8 +12,14 @@ RetryTime = 1 # time to wait before retrying PLC read/write in seconds. Not the 
 path = 'C:/Users/Inductor Winding/Desktop/'
 
  # Tag names in PLC
-ReadyTag = 'MainProgram.Ready'
-DoneTag = 'Done'
+localBase = 'Program:MainProgram.' # tag to specify tag local to MainProgram
+ReadyTag = localBase + 'Ready'
+DoneTag = localBase + 'Done'
+
+inductance = 'Coil.Inductance'
+maxDia = 'Coil.MaxDia'
+current = 'Coil.Current'
+
 CommsDoneTag = 'InductorSent' # this code sets this true when it is done sending data
 
 
