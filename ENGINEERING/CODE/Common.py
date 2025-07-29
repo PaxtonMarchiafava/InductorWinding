@@ -1,5 +1,9 @@
 
+# todo:
+# function: c++ -> python
+
 # file with functions and variables that are used in the other files
+
 
 import time
 
@@ -17,7 +21,11 @@ ReadyTag = localBase + 'Ready'
 DoneTag = localBase + 'Done'
 
 inductance = 'Coil.Inductance'
+turns = 'Coil.Turns'
+mass = 'Coil.Mass'
 Diameter = 'Coil.Diameter'
+Turns_X = 'Coil.Turns_X'
+Turns_Z = 'Coil.Turns_Z'
 current = 'Coil.Current'
 
 CommsDoneTag = localBase + 'InductorSent' # this code sets this true when it is done sending data
