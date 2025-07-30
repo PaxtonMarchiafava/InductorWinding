@@ -107,6 +107,7 @@ def SendInductor (plc, inductor): # waits for ready, sends inductor values to PL
   SendPLCVal(plc, Common.Turns_X, inductor.Turns_X)
   SendPLCVal(plc, Common.Turns_Z, inductor.Turns_Z)
   SendPLCVal(plc, Common.current, inductor.Current)
+  SendPLCVal(plc, Common.length, inductor.Length)
 
   SendPLCVal(plc, Common.CommsDoneTag, True)
   CoilStartTime = CTRL.GetPLCTime(True)

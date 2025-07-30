@@ -20,13 +20,14 @@ localBase = 'Program:MainProgram.' # tag to specify tag local to MainProgram
 ReadyTag = localBase + 'Ready'
 DoneTag = localBase + 'Done'
 
-inductance = 'Coil.Inductance'
-turns = 'Coil.Turns'
-mass = 'Coil.Mass'
-Diameter = 'Coil.Diameter'
-Turns_X = 'Coil.Turns_X'
-Turns_Z = 'Coil.Turns_Z'
-current = 'Coil.Current'
+inductance = 'Coil.Inductance' # Real
+turns = 'Coil.Turns' # INT
+mass = 'Coil.Mass' # Real
+Diameter = 'Coil.Diameter' # Real
+Turns_X = 'Coil.Turns_X' # INT
+Turns_Z = 'Coil.Turns_Z' # INT
+current = 'Coil.Current' # Real
+length = 'Coil.Length' # Real
 
 CommsDoneTag = localBase + 'InductorSent' # this code sets this true when it is done sending data
 
