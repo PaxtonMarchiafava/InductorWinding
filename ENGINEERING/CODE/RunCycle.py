@@ -1,3 +1,5 @@
+# This world would be at better place if we just used cross sectional area instead of gauge
+
 from pylogix import PLC
 import Common
 from Common import log, GetPLCVal
@@ -19,7 +21,17 @@ class Inductor:
     self.Turns_X = 1
     self.Turns_Z = 1
     self.Current = (Current * pow(10, -3)) # mA -> A
-    self.wireDia = 0.001 # m
+
+    if (self.Current > (15 * 0.5)): # these nums are wrong
+      self.wireDia = 0.001628 # m
+      self.gauge = 14
+    elif (self.Current > (5 * 0.5)):
+      self.wireDia = 0.00129 # m
+      self.gauge = 16
+    elif (self.Current > (1 * 0.5)):
+      self.wireDia = 0.00102 # m
+      self.gauge = 18
+    
     self.length = 0 # m
     self.wireLength = 0
   
@@ -107,7 +119,7 @@ def SendInductor (plc, inductor): # waits for ready, sends inductor values to PL
   SendPLCVal(plc, Common.Turns_X, inductor.Turns_X)
   SendPLCVal(plc, Common.Turns_Z, inductor.Turns_Z)
   SendPLCVal(plc, Common.current, inductor.Current)
-  SendPLCVal(plc, Common.length, inductor.Length)
+  SendPLCVal(plc, Common.length, inductor.length)
 
   SendPLCVal(plc, Common.CommsDoneTag, True)
   CoilStartTime = CTRL.GetPLCTime(True)
