@@ -47,6 +47,7 @@ class Inductor:
     print("WireDia: " + str(self.wireDia))
     print("Length: " + str(self.length))
     print("wireLength: " + str(self.wireLength))
+    print("Gauge: " + str(self.gauge))
 
 def calculateInductor(inductor):
 
