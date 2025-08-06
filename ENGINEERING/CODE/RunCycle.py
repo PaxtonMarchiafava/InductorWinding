@@ -111,6 +111,7 @@ def GetOrderFile(): # returns path to oldest PendingOrder file
   return Common.path + 'PendingOrders/' + oldestFile
 
 def SendInductor (plc, inductor): # waits for ready, sends inductor values to PLC, waits for done
+  print("waiting to send")
 
   WaitForVal(plc, Common.ReadyTag, True)
   
@@ -127,6 +128,8 @@ def SendInductor (plc, inductor): # waits for ready, sends inductor values to PL
   CoilStartTime = CTRL.GetPLCTime(True)
 
   log('Sent Inductor:\t\t\t\t' + str(inductor.Inductance) + ' mH, ' + str(inductor.Diameter) + ' mm, ' + str(inductor.Current) + ' mA')
+  print('Sent Inductor:\t\t\t\t' + str(inductor.Inductance) + ' mH, ' + str(inductor.Diameter) + ' mm, ' + str(inductor.Current) + ' mA')
+
   WaitForVal(CTRL, Common.DoneTag, True)
   log('Coil wind time:\t\t\t\t' + str((CTRL.GetPLCTime(True) - CoilStartTime) * 0.001) + ' ms') # log cycle time
 
