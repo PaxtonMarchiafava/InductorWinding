@@ -155,9 +155,12 @@ with PLC() as CTRL:
       inductor = Inductor(float(Inductance), float(Diameter), float(Current))
       log('Read Inductor:\t\t\t\t' + str(inductor.Inductance) + ' mH, ' + str(inductor.Diameter) + ' mm, ' + str(inductor.Current) + ' mA')
 
+      if (inductor.Diameter > 0.19): # if diameter is too large, skip
+        log('Diameter too large')
+        continue
+
       inductor = calculateInductor(inductor)
       inductor.printCoil()
-
 
       SendInductor(CTRL, inductor)
 
