@@ -22,6 +22,7 @@ class Inductor:
     self.Turns_Z = 1
     self.Current = (Current * pow(10, -3)) # mA -> A
     self.wireDia = 0.001 # m
+    self.gauge = 16 # AWG
 
     if (self.Current > (15 * 0.5)): # these nums are wrong
       self.wireDia = 0.001628 # m
