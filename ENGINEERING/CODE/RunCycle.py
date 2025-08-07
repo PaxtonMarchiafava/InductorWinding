@@ -115,6 +115,7 @@ def SendInductor (plc, inductor): # waits for ready, sends inductor values to PL
   print("waiting to send")
 
   WaitForVal(plc, Common.ReadyTag, True)
+  print('Sending')
   
   SendPLCVal(plc, Common.inductance, inductor.Inductance)
   SendPLCVal(plc, Common.turns, inductor.Turns)
