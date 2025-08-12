@@ -3,10 +3,6 @@
 
 At Humber College, the capstone project in the Electromechanical Engineering Technology program is a two-semester team-based project where students design and build real-world automation systems. Our project involves designing and building an automated inductor winding cell using a FANUC robot, a Cognex vision system, and some custom hardware to feed wire and wind the coil. The goal is to streamline the production of inductors by automating the precise placement and winding of copper with an air core.
 
----
-The Inductor Coil Winding Project is a fully automated system for winding inductors with high precision and efficiency. The machine ensures consistent coil quality and accelerates production by reducing human intervention and integrating advanced programmable controls. Key features include an automated winding mechanism, customizable input parameters, real-time quality monitoring, and a user-friendly interface.
----
-
  - FANUC CR-4iA: Handles inductor loading/unloading and wire positioning.
  - Cognex Camera: Verifies wire orientation and alignment before winding, ensuring quality control.
  - SICK Safety Scanners: Provide perimeter safety monitoring and zone control, allowing safe human interaction during operation and maintenance.
@@ -25,7 +21,7 @@ The mechanical design of the inductor winding cell is built on an aluminum extru
 The electrical system includes a stepper servo motor for precise control of the winding process and DC motors for consistent wire feeding. A PLC coordinates motor control, I/O, and system logic. Safety is managed through SICK safety scanners, integrated to monitor cell access and ensure safe operation. The FANUC robot and Cognex vision system interface with the PLC for synchronized winding operation. Power distribution is handled through a centralized panel, with proper circuit protection, grounding, and cable management to ensure reliability,  and safety throughout the cell.
 
 ## PLC Program
-**See Program [here](../ENGINEERING/PLCProgram.pdf)**
+**See Program [here](../ENGINEERING/PLCCode.pdf)**
 
 The PLC program is the central controller of the inductor winding cell, handling automation, data processing, and system coordination. It reads inductor specifications—such as target inductance, wire gauge, and core size—from a preloaded spreadsheet. Based on these inputs, the PLC calculates key winding parameters like the number of turns and winding length.
 - Stepper Servo Control: The PLC sends calculated position and speed commands to the stepper servo motor to control the winding process with precision.
@@ -42,9 +38,21 @@ This PLC program enables a flexible, fully automated process that adjusts to dif
 
 This HMI was designed with a strong focus on clarity, safety, and operator efficiency. The interface features a clean, intuitive layout with high-contrast visuals and standardized navigation, ensuring critical information like alarms, machine status, and production metrics are immediately visible. Alarm management is prioritized through a tiered system that highlights urgent issues and provides clear operator instructions. The HMI includes role-based access, preventing unauthorized changes while allowing technicians and engineers deeper access for diagnostics. Real-time trends, historical data, and customizable dashboards support both day-to-day operations and long-term optimization. Built with modular, scalable components, the design is easy to maintain and expand. Remote access and mobile compatibility offer flexibility for on-the-go monitoring, making this HMI both robust and user-friendly in a modern industrial environment.
 
+## Extras
+
+The class that this project is for requires some more documentation to be created. This includes a video showing off our project, and a final report loosely based on the OACETT report guidelines
+
+<a href="https://www.youtube.com/watch?v=hgyo3jtm0eI&ab_channel=PaxtonMarchiafava" title="Gmail">
+  <img src="https://img.shields.io/badge/Project Video-D14836?style=for-the-badge&logo=YouTube&logoColor=white" alt="Gmail" />
+</a>
+
+<a href="..\docs\OACETT-Report.pdf" title="OACETT">
+  <img src="https://img.shields.io/badge/OACETT Report-4070DC.svg?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAA3NCSVQICAjb4U/gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAGHaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pg0KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIj48dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERj48L3g6eG1wbWV0YT4NCjw/eHBhY2tldCBlbmQ9J3cnPz4slJgLAAAASFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///+rOoqJAAAAF3RSTlMABAYKCwwOEBUYHiIrLTAxND9DR05VXak471EAAAG5SURBVHja7dzZTsMwFEVRMwQohVDG+/9/yhN0IImDp9xj7f3eSkutfYRoGwIRERERERERERER0YquLSGHjsGsC0miw50k2WG9OKwXhzl1/OdhB2+QwfqADNYHZLA+ID+OD3HIryOkQnzcXkdHNsScOKQhpw5lyJkjZBz2jU/9uUMXcuGQhVw68iHbHJU/jmIQ29hRDmLbOiQhUw5FyKQjHzKOY1vItKPI9dsUMuOQg8w51CCzDjHIvEMLsuCQgiw5lCCLDiHIskMHEnHIQGIOFUjUIQKJOzQgKxwSkDUOBchtpf8/NYcYEF1I6AQSBCDPu3h3CpBd+ecFAgQIECBAgAABAgRIO8g+49Ox9uAH8mZZ7d1ALDMgpSGfeY4XP4f9NcfxxPULBAjLzrKz7Cw7y871CwQIy86ys+wsO8vOjgABwrKz7Cw7y86ysyNAgLDsLDsQlp1lBwIECBAgQIAAAQLEHeT9ULwvz99nT/p7EQgQcchVZUf739eqfg8DAdIDpOaxBwJEHPJY03ETGv+67PH6Ktn9yUveGlLtvQvE4akHAkQcUlUyhD4kbR1ERERERERERERE5K5vYb527kNzfqIAAAAASUVORK5CYII=" alt="OACETT Report" />
+</a>
+
 ## The Team
 
-Although there are "designations" under all of our photos that state a job, that is just what we focused on. In reality, we all ended up dealing with everything.
+Although there are "designations" under all of our photos that state a job, that is just what we focused on. In reality, everyone ended up dealing with everything.
 
 ### Paxton Coghlin
 <a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Paxton\Portrait.JPG" alt="Paxton Coghlin" style="height:411px;"></a>
@@ -68,15 +76,15 @@ Although there are "designations" under all of our photos that state a job, that
  - Mechanical/Electrical Assistant
 
 ### Josh Le Blanc
-<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Josh\Portrait.JPG" alt="Josh Le Blanc" style="height:411px;"></a>
+<a href="..\TeamInfo\Josh\Resume.pdf"><img src="..\TeamInfo\Josh\Portrait.JPG" alt="Josh Le Blanc" style="height:411px;"></a>
 <p>
-  <a href="mailto:paxtoncoghlin@gmail.com" title="Gmail">
+  <a href="mailto:joshleblanc509@gmail.com" title="Gmail">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail" />
   </a>
   <a href="https://www.linkedin.com/in/michael-joshua-le-blanc-000761262/" title="Linkedin">
     <img src="https://img.shields.io/badge/linkedin-3464C3.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI3MiIgdmlld0JveD0iMCAwIDcyIDcyIiB3aWR0aD0iNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNOCw3MiBMNjQsNzIgQzY4LjQxODI3OCw3MiA3Miw2OC40MTgyNzggNzIsNjQgTDcyLDggQzcyLDMuNTgxNzIyIDY4LjQxODI3OCwtOC4xMTYyNDUwMWUtMTYgNjQsMCBMOCwwIEMzLjU4MTcyMiw4LjExNjI0NTAxZS0xNiAtNS40MTA4MzAwMWUtMTYsMy41ODE3MjIgMCw4IEwwLDY0IEM1LjQxMDgzMDAxZS0xNiw2OC40MTgyNzggMy41ODE3MjIsNzIgOCw3MiBaIiBmaWxsPSIjZmZmZmZmIi8+PHBhdGggZD0iTTYyLDYyIEw1MS4zMTU2MjUsNjIgTDUxLjMxNTYyNSw0My44MDIxMTQ5IEM1MS4zMTU2MjUsMzguODEyNzU0MiA0OS40MTk3OTE3LDM2LjAyNDUzMjMgNDUuNDcwNzAzMSwzNi4wMjQ1MzIzIEM0MS4xNzQ2MDk0LDM2LjAyNDUzMjMgMzguOTMwMDc4MSwzOC45MjYxMTAzIDM4LjkzMDA3ODEsNDMuODAyMTE0OSBMMzguOTMwMDc4MSw2MiBMMjguNjMzMzMzMyw2MiBMMjguNjMzMzMzMywyNy4zMzMzMzMzIEwzOC45MzAwNzgxLDI3LjMzMzMzMzMgTDM4LjkzMDA3ODEsMzIuMDAyOTI4MyBDMzguOTMwMDc4MSwzMi4wMDI5MjgzIDQyLjAyNjA0MTcsMjYuMjc0MjE1MSA0OS4zODI1NTIxLDI2LjI3NDIxNTEgQzU2LjczNTY3NzEsMjYuMjc0MjE1MSA2MiwzMC43NjQ0NzA1IDYyLDQwLjA1MTIxMiBMNjIsNjIgWiBNMTYuMzQ5MzQ5LDIyLjc5NDAxMzMgQzEyLjg0MjA1NzMsMjIuNzk0MDEzMyAxMCwxOS45Mjk2NTY3IDEwLDE2LjM5NzAwNjcgQzEwLDEyLjg2NDM1NjYgMTIuODQyMDU3MywxMCAxNi4zNDkzNDksMTAgQzE5Ljg1NjY0MDYsMTAgMjIuNjk3MDA1MiwxMi44NjQzNTY2IDIyLjY5NzAwNTIsMTYuMzk3MDA2NyBDMjIuNjk3MDA1MiwxOS45Mjk2NTY3IDE5Ljg1NjY0MDYsMjIuNzk0MDEzMyAxNi4zNDkzNDksMjIuNzk0MDEzMyBaIE0xMS4wMzI1NTIxLDYyIEwyMS43Njk0MDEsNjIgTDIxLjc2OTQwMSwyNy4zMzMzMzMzIEwxMS4wMzI1NTIxLDI3LjMzMzMzMzMgTDExLjAzMjU1MjEsNjIgWiIgZmlsbD0iIzM0NjRDMyIvPjwvZz48L3N2Zz4=" alt="Linkedin" />
   </a>
-  <a href="https://github.com/PaxtonMarchiafava/PaxtonMarchiafava/blob/main/Resume/Resume.pdf" title="Resume">
+  <a href="https://github.com/PaxtonMarchiafava/InductorWinding/blob/main/TeamInfo/Josh/Resume.pdf" title="Resume">
     <img src="https://img.shields.io/badge/Resume-8888ff.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNOCA1LjAwMDA1QzcuMDExNjUgNS4wMDA4MiA2LjQ5MzU5IDUuMDEzMzggNi4wOTIwMiA1LjIxNzk5QzUuNzE1NjkgNS40MDk3MyA1LjQwOTczIDUuNzE1NjkgNS4yMTc5OSA2LjA5MjAyQzUgNi41MTk4NCA1IDcuMDc5ODkgNSA4LjJWMTcuOEM1IDE4LjkyMDEgNSAxOS40ODAyIDUuMjE3OTkgMTkuOTA4QzUuNDA5NzMgMjAuMjg0MyA1LjcxNTY5IDIwLjU5MDMgNi4wOTIwMiAyMC43ODJDNi41MTk4NCAyMSA3LjA3OTg5IDIxIDguMiAyMUgxNS44QzE2LjkyMDEgMjEgMTcuNDgwMiAyMSAxNy45MDggMjAuNzgyQzE4LjI4NDMgMjAuNTkwMyAxOC41OTAzIDIwLjI4NDMgMTguNzgyIDE5LjkwOEMxOSAxOS40ODAyIDE5IDE4LjkyMDEgMTkgMTcuOFY4LjJDMTkgNy4wNzk4OSAxOSA2LjUxOTg0IDE4Ljc4MiA2LjA5MjAyQzE4LjU5MDMgNS43MTU2OSAxOC4yODQzIDUuNDA5NzMgMTcuOTA4IDUuMjE3OTlDMTcuNTA2NCA1LjAxMzM4IDE2Ljk4ODQgNS4wMDA4MiAxNiA1LjAwMDA1TTggNS4wMDAwNVY3SDE2VjUuMDAwMDVNOCA1LjAwMDA1VjQuNzA3MTFDOCA0LjI1NDM1IDguMTc5ODYgMy44MjAxNCA4LjUgMy41QzguODIwMTQgMy4xNzk4NiA5LjI1NDM1IDMgOS43MDcxMSAzSDE0LjI5MjlDMTQuNzQ1NiAzIDE1LjE3OTkgMy4xNzk4NiAxNS41IDMuNUMxNS44MjAxIDMuODIwMTQgMTYgNC4yNTQzNSAxNiA0LjcwNzExVjUuMDAwMDVNMTYgMTFIMTRNMTYgMTZIMTRNOCAxMUw5IDEyTDExIDEwTTggMTZMOSAxN0wxMSAxNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+" alt="Resume" />
   </a>
 </p>
@@ -87,13 +95,13 @@ Although there are "designations" under all of our photos that state a job, that
 ### Rushawn Waite
 <a href="..\TeamInfo\Shawn\Resume.pdf"><img src="..\TeamInfo\Shawn\Portrait.JPG" alt="Rushawn Waite" style="height:411px;"></a>
 <p>
-  <a href="mailto:paxtoncoghlin@gmail.com" title="Gmail">
+  <a href="mailto:rushawnwaite2018@gmail.com" title="Gmail">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail" />
   </a>
   <a href="https://www.linkedin.com/in/rushawn-waite-8a14a5262/" title="Linkedin">
     <img src="https://img.shields.io/badge/linkedin-3464C3.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI3MiIgdmlld0JveD0iMCAwIDcyIDcyIiB3aWR0aD0iNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNOCw3MiBMNjQsNzIgQzY4LjQxODI3OCw3MiA3Miw2OC40MTgyNzggNzIsNjQgTDcyLDggQzcyLDMuNTgxNzIyIDY4LjQxODI3OCwtOC4xMTYyNDUwMWUtMTYgNjQsMCBMOCwwIEMzLjU4MTcyMiw4LjExNjI0NTAxZS0xNiAtNS40MTA4MzAwMWUtMTYsMy41ODE3MjIgMCw4IEwwLDY0IEM1LjQxMDgzMDAxZS0xNiw2OC40MTgyNzggMy41ODE3MjIsNzIgOCw3MiBaIiBmaWxsPSIjZmZmZmZmIi8+PHBhdGggZD0iTTYyLDYyIEw1MS4zMTU2MjUsNjIgTDUxLjMxNTYyNSw0My44MDIxMTQ5IEM1MS4zMTU2MjUsMzguODEyNzU0MiA0OS40MTk3OTE3LDM2LjAyNDUzMjMgNDUuNDcwNzAzMSwzNi4wMjQ1MzIzIEM0MS4xNzQ2MDk0LDM2LjAyNDUzMjMgMzguOTMwMDc4MSwzOC45MjYxMTAzIDM4LjkzMDA3ODEsNDMuODAyMTE0OSBMMzguOTMwMDc4MSw2MiBMMjguNjMzMzMzMyw2MiBMMjguNjMzMzMzMywyNy4zMzMzMzMzIEwzOC45MzAwNzgxLDI3LjMzMzMzMzMgTDM4LjkzMDA3ODEsMzIuMDAyOTI4MyBDMzguOTMwMDc4MSwzMi4wMDI5MjgzIDQyLjAyNjA0MTcsMjYuMjc0MjE1MSA0OS4zODI1NTIxLDI2LjI3NDIxNTEgQzU2LjczNTY3NzEsMjYuMjc0MjE1MSA2MiwzMC43NjQ0NzA1IDYyLDQwLjA1MTIxMiBMNjIsNjIgWiBNMTYuMzQ5MzQ5LDIyLjc5NDAxMzMgQzEyLjg0MjA1NzMsMjIuNzk0MDEzMyAxMCwxOS45Mjk2NTY3IDEwLDE2LjM5NzAwNjcgQzEwLDEyLjg2NDM1NjYgMTIuODQyMDU3MywxMCAxNi4zNDkzNDksMTAgQzE5Ljg1NjY0MDYsMTAgMjIuNjk3MDA1MiwxMi44NjQzNTY2IDIyLjY5NzAwNTIsMTYuMzk3MDA2NyBDMjIuNjk3MDA1MiwxOS45Mjk2NTY3IDE5Ljg1NjY0MDYsMjIuNzk0MDEzMyAxNi4zNDkzNDksMjIuNzk0MDEzMyBaIE0xMS4wMzI1NTIxLDYyIEwyMS43Njk0MDEsNjIgTDIxLjc2OTQwMSwyNy4zMzMzMzMzIEwxMS4wMzI1NTIxLDI3LjMzMzMzMzMgTDExLjAzMjU1MjEsNjIgWiIgZmlsbD0iIzM0NjRDMyIvPjwvZz48L3N2Zz4=" alt="Linkedin" />
   </a>
-  <a href="https://github.com/PaxtonMarchiafava/PaxtonMarchiafava/blob/main/Resume/Resume.pdf" title="Resume">
+  <a href="https://github.com/PaxtonMarchiafava/InductorWinding/blob/main/TeamInfo/Shawn/Resume.pdf" title="Resume">
     <img src="https://img.shields.io/badge/Resume-8888ff.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNOCA1LjAwMDA1QzcuMDExNjUgNS4wMDA4MiA2LjQ5MzU5IDUuMDEzMzggNi4wOTIwMiA1LjIxNzk5QzUuNzE1NjkgNS40MDk3MyA1LjQwOTczIDUuNzE1NjkgNS4yMTc5OSA2LjA5MjAyQzUgNi41MTk4NCA1IDcuMDc5ODkgNSA4LjJWMTcuOEM1IDE4LjkyMDEgNSAxOS40ODAyIDUuMjE3OTkgMTkuOTA4QzUuNDA5NzMgMjAuMjg0MyA1LjcxNTY5IDIwLjU5MDMgNi4wOTIwMiAyMC43ODJDNi41MTk4NCAyMSA3LjA3OTg5IDIxIDguMiAyMUgxNS44QzE2LjkyMDEgMjEgMTcuNDgwMiAyMSAxNy45MDggMjAuNzgyQzE4LjI4NDMgMjAuNTkwMyAxOC41OTAzIDIwLjI4NDMgMTguNzgyIDE5LjkwOEMxOSAxOS40ODAyIDE5IDE4LjkyMDEgMTkgMTcuOFY4LjJDMTkgNy4wNzk4OSAxOSA2LjUxOTg0IDE4Ljc4MiA2LjA5MjAyQzE4LjU5MDMgNS43MTU2OSAxOC4yODQzIDUuNDA5NzMgMTcuOTA4IDUuMjE3OTlDMTcuNTA2NCA1LjAxMzM4IDE2Ljk4ODQgNS4wMDA4MiAxNiA1LjAwMDA1TTggNS4wMDAwNVY3SDE2VjUuMDAwMDVNOCA1LjAwMDA1VjQuNzA3MTFDOCA0LjI1NDM1IDguMTc5ODYgMy44MjAxNCA4LjUgMy41QzguODIwMTQgMy4xNzk4NiA5LjI1NDM1IDMgOS43MDcxMSAzSDE0LjI5MjlDMTQuNzQ1NiAzIDE1LjE3OTkgMy4xNzk4NiAxNS41IDMuNUMxNS44MjAxIDMuODIwMTQgMTYgNC4yNTQzNSAxNiA0LjcwNzExVjUuMDAwMDVNMTYgMTFIMTRNMTYgMTZIMTRNOCAxMUw5IDEyTDExIDEwTTggMTZMOSAxN0wxMSAxNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+" alt="Resume" />
   </a>
 </p>
@@ -102,7 +110,7 @@ Although there are "designations" under all of our photos that state a job, that
  - Robotics Assistant
 
 ### Grant Maddock
-<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Grant\Portrait.JPG" alt="Grant Maddock" style="height:411px;"></a>
+<a href="..\TeamInfo\Grant\Resume.pdf"><img src="..\TeamInfo\Grant\Portrait.JPG" alt="Grant Maddock" style="height:411px;"></a>
 <p>
   <a href="mailto:paxtoncoghlin@gmail.com" title="Gmail">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail" />
@@ -110,7 +118,7 @@ Although there are "designations" under all of our photos that state a job, that
   <a href="https://www.linkedin.com/in/grant-maddock-bb142b266/" title="Linkedin">
     <img src="https://img.shields.io/badge/linkedin-3464C3.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI3MiIgdmlld0JveD0iMCAwIDcyIDcyIiB3aWR0aD0iNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNOCw3MiBMNjQsNzIgQzY4LjQxODI3OCw3MiA3Miw2OC40MTgyNzggNzIsNjQgTDcyLDggQzcyLDMuNTgxNzIyIDY4LjQxODI3OCwtOC4xMTYyNDUwMWUtMTYgNjQsMCBMOCwwIEMzLjU4MTcyMiw4LjExNjI0NTAxZS0xNiAtNS40MTA4MzAwMWUtMTYsMy41ODE3MjIgMCw4IEwwLDY0IEM1LjQxMDgzMDAxZS0xNiw2OC40MTgyNzggMy41ODE3MjIsNzIgOCw3MiBaIiBmaWxsPSIjZmZmZmZmIi8+PHBhdGggZD0iTTYyLDYyIEw1MS4zMTU2MjUsNjIgTDUxLjMxNTYyNSw0My44MDIxMTQ5IEM1MS4zMTU2MjUsMzguODEyNzU0MiA0OS40MTk3OTE3LDM2LjAyNDUzMjMgNDUuNDcwNzAzMSwzNi4wMjQ1MzIzIEM0MS4xNzQ2MDk0LDM2LjAyNDUzMjMgMzguOTMwMDc4MSwzOC45MjYxMTAzIDM4LjkzMDA3ODEsNDMuODAyMTE0OSBMMzguOTMwMDc4MSw2MiBMMjguNjMzMzMzMyw2MiBMMjguNjMzMzMzMywyNy4zMzMzMzMzIEwzOC45MzAwNzgxLDI3LjMzMzMzMzMgTDM4LjkzMDA3ODEsMzIuMDAyOTI4MyBDMzguOTMwMDc4MSwzMi4wMDI5MjgzIDQyLjAyNjA0MTcsMjYuMjc0MjE1MSA0OS4zODI1NTIxLDI2LjI3NDIxNTEgQzU2LjczNTY3NzEsMjYuMjc0MjE1MSA2MiwzMC43NjQ0NzA1IDYyLDQwLjA1MTIxMiBMNjIsNjIgWiBNMTYuMzQ5MzQ5LDIyLjc5NDAxMzMgQzEyLjg0MjA1NzMsMjIuNzk0MDEzMyAxMCwxOS45Mjk2NTY3IDEwLDE2LjM5NzAwNjcgQzEwLDEyLjg2NDM1NjYgMTIuODQyMDU3MywxMCAxNi4zNDkzNDksMTAgQzE5Ljg1NjY0MDYsMTAgMjIuNjk3MDA1MiwxMi44NjQzNTY2IDIyLjY5NzAwNTIsMTYuMzk3MDA2NyBDMjIuNjk3MDA1MiwxOS45Mjk2NTY3IDE5Ljg1NjY0MDYsMjIuNzk0MDEzMyAxNi4zNDkzNDksMjIuNzk0MDEzMyBaIE0xMS4wMzI1NTIxLDYyIEwyMS43Njk0MDEsNjIgTDIxLjc2OTQwMSwyNy4zMzMzMzMzIEwxMS4wMzI1NTIxLDI3LjMzMzMzMzMgTDExLjAzMjU1MjEsNjIgWiIgZmlsbD0iIzM0NjRDMyIvPjwvZz48L3N2Zz4=" alt="Linkedin" />
   </a>
-  <a href="https://github.com/PaxtonMarchiafava/PaxtonMarchiafava/blob/main/Resume/Resume.pdf" title="Resume">
+  <a href="..\TeamInfo\Grant\Resume.pdf" title="Resume">
     <img src="https://img.shields.io/badge/Resume-8888ff.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNOCA1LjAwMDA1QzcuMDExNjUgNS4wMDA4MiA2LjQ5MzU5IDUuMDEzMzggNi4wOTIwMiA1LjIxNzk5QzUuNzE1NjkgNS40MDk3MyA1LjQwOTczIDUuNzE1NjkgNS4yMTc5OSA2LjA5MjAyQzUgNi41MTk4NCA1IDcuMDc5ODkgNSA4LjJWMTcuOEM1IDE4LjkyMDEgNSAxOS40ODAyIDUuMjE3OTkgMTkuOTA4QzUuNDA5NzMgMjAuMjg0MyA1LjcxNTY5IDIwLjU5MDMgNi4wOTIwMiAyMC43ODJDNi41MTk4NCAyMSA3LjA3OTg5IDIxIDguMiAyMUgxNS44QzE2LjkyMDEgMjEgMTcuNDgwMiAyMSAxNy45MDggMjAuNzgyQzE4LjI4NDMgMjAuNTkwMyAxOC41OTAzIDIwLjI4NDMgMTguNzgyIDE5LjkwOEMxOSAxOS40ODAyIDE5IDE4LjkyMDEgMTkgMTcuOFY4LjJDMTkgNy4wNzk4OSAxOSA2LjUxOTg0IDE4Ljc4MiA2LjA5MjAyQzE4LjU5MDMgNS43MTU2OSAxOC4yODQzIDUuNDA5NzMgMTcuOTA4IDUuMjE3OTlDMTcuNTA2NCA1LjAxMzM4IDE2Ljk4ODQgNS4wMDA4MiAxNiA1LjAwMDA1TTggNS4wMDAwNVY3SDE2VjUuMDAwMDVNOCA1LjAwMDA1VjQuNzA3MTFDOCA0LjI1NDM1IDguMTc5ODYgMy44MjAxNCA4LjUgMy41QzguODIwMTQgMy4xNzk4NiA5LjI1NDM1IDMgOS43MDcxMSAzSDE0LjI5MjlDMTQuNzQ1NiAzIDE1LjE3OTkgMy4xNzk4NiAxNS41IDMuNUMxNS44MjAxIDMuODIwMTQgMTYgNC4yNTQzNSAxNiA0LjcwNzExVjUuMDAwMDVNMTYgMTFIMTRNMTYgMTZIMTRNOCAxMUw5IDEyTDExIDEwTTggMTZMOSAxN0wxMSAxNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+" alt="Resume" />
   </a>
 </p>
@@ -120,21 +128,19 @@ Although there are "designations" under all of our photos that state a job, that
  - Mechanical Assistant
 
 ### Jaidan Mitchell
-<a href="..\TeamInfo\Paxton\Resume.pdf"><img src="..\TeamInfo\Jaidan\Portrait.JPG" alt="Jaidan Mitchell" style="height:411px;"></a>
+<a href="..\TeamInfo\Jaidan\Resume.pdf"><img src="..\TeamInfo\Jaidan\Portrait.JPG" alt="Jaidan Mitchell" style="height:411px;"></a>
 <p>
-  <a href="mailto:paxtoncoghlin@gmail.com" title="Gmail">
+  <a href="mailto:jaidanmitchell@gmail.com" title="Gmail">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail" />
   </a>
   <a href="https://www.linkedin.com/in/jaidan-mitchell-05a72426a/" title="Linkedin">
     <img src="https://img.shields.io/badge/linkedin-3464C3.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI3MiIgdmlld0JveD0iMCAwIDcyIDcyIiB3aWR0aD0iNzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNOCw3MiBMNjQsNzIgQzY4LjQxODI3OCw3MiA3Miw2OC40MTgyNzggNzIsNjQgTDcyLDggQzcyLDMuNTgxNzIyIDY4LjQxODI3OCwtOC4xMTYyNDUwMWUtMTYgNjQsMCBMOCwwIEMzLjU4MTcyMiw4LjExNjI0NTAxZS0xNiAtNS40MTA4MzAwMWUtMTYsMy41ODE3MjIgMCw4IEwwLDY0IEM1LjQxMDgzMDAxZS0xNiw2OC40MTgyNzggMy41ODE3MjIsNzIgOCw3MiBaIiBmaWxsPSIjZmZmZmZmIi8+PHBhdGggZD0iTTYyLDYyIEw1MS4zMTU2MjUsNjIgTDUxLjMxNTYyNSw0My44MDIxMTQ5IEM1MS4zMTU2MjUsMzguODEyNzU0MiA0OS40MTk3OTE3LDM2LjAyNDUzMjMgNDUuNDcwNzAzMSwzNi4wMjQ1MzIzIEM0MS4xNzQ2MDk0LDM2LjAyNDUzMjMgMzguOTMwMDc4MSwzOC45MjYxMTAzIDM4LjkzMDA3ODEsNDMuODAyMTE0OSBMMzguOTMwMDc4MSw2MiBMMjguNjMzMzMzMyw2MiBMMjguNjMzMzMzMywyNy4zMzMzMzMzIEwzOC45MzAwNzgxLDI3LjMzMzMzMzMgTDM4LjkzMDA3ODEsMzIuMDAyOTI4MyBDMzguOTMwMDc4MSwzMi4wMDI5MjgzIDQyLjAyNjA0MTcsMjYuMjc0MjE1MSA0OS4zODI1NTIxLDI2LjI3NDIxNTEgQzU2LjczNTY3NzEsMjYuMjc0MjE1MSA2MiwzMC43NjQ0NzA1IDYyLDQwLjA1MTIxMiBMNjIsNjIgWiBNMTYuMzQ5MzQ5LDIyLjc5NDAxMzMgQzEyLjg0MjA1NzMsMjIuNzk0MDEzMyAxMCwxOS45Mjk2NTY3IDEwLDE2LjM5NzAwNjcgQzEwLDEyLjg2NDM1NjYgMTIuODQyMDU3MywxMCAxNi4zNDkzNDksMTAgQzE5Ljg1NjY0MDYsMTAgMjIuNjk3MDA1MiwxMi44NjQzNTY2IDIyLjY5NzAwNTIsMTYuMzk3MDA2NyBDMjIuNjk3MDA1MiwxOS45Mjk2NTY3IDE5Ljg1NjY0MDYsMjIuNzk0MDEzMyAxNi4zNDkzNDksMjIuNzk0MDEzMyBaIE0xMS4wMzI1NTIxLDYyIEwyMS43Njk0MDEsNjIgTDIxLjc2OTQwMSwyNy4zMzMzMzMzIEwxMS4wMzI1NTIxLDI3LjMzMzMzMzMgTDExLjAzMjU1MjEsNjIgWiIgZmlsbD0iIzM0NjRDMyIvPjwvZz48L3N2Zz4=" alt="Linkedin" />
   </a>
-  <a href="https://github.com/PaxtonMarchiafava/PaxtonMarchiafava/blob/main/Resume/Resume.pdf" title="Resume">
+  <a href="https://github.com/PaxtonMarchiafava/InductorWinding/blob/main/TeamInfo/Jaidan/Resume.pdf" title="Resume">
     <img src="https://img.shields.io/badge/Resume-8888ff.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNOCA1LjAwMDA1QzcuMDExNjUgNS4wMDA4MiA2LjQ5MzU5IDUuMDEzMzggNi4wOTIwMiA1LjIxNzk5QzUuNzE1NjkgNS40MDk3MyA1LjQwOTczIDUuNzE1NjkgNS4yMTc5OSA2LjA5MjAyQzUgNi41MTk4NCA1IDcuMDc5ODkgNSA4LjJWMTcuOEM1IDE4LjkyMDEgNSAxOS40ODAyIDUuMjE3OTkgMTkuOTA4QzUuNDA5NzMgMjAuMjg0MyA1LjcxNTY5IDIwLjU5MDMgNi4wOTIwMiAyMC43ODJDNi41MTk4NCAyMSA3LjA3OTg5IDIxIDguMiAyMUgxNS44QzE2LjkyMDEgMjEgMTcuNDgwMiAyMSAxNy45MDggMjAuNzgyQzE4LjI4NDMgMjAuNTkwMyAxOC41OTAzIDIwLjI4NDMgMTguNzgyIDE5LjkwOEMxOSAxOS40ODAyIDE5IDE4LjkyMDEgMTkgMTcuOFY4LjJDMTkgNy4wNzk4OSAxOSA2LjUxOTg0IDE4Ljc4MiA2LjA5MjAyQzE4LjU5MDMgNS43MTU2OSAxOC4yODQzIDUuNDA5NzMgMTcuOTA4IDUuMjE3OTlDMTcuNTA2NCA1LjAxMzM4IDE2Ljk4ODQgNS4wMDA4MiAxNiA1LjAwMDA1TTggNS4wMDAwNVY3SDE2VjUuMDAwMDVNOCA1LjAwMDA1VjQuNzA3MTFDOCA0LjI1NDM1IDguMTc5ODYgMy44MjAxNCA4LjUgMy41QzguODIwMTQgMy4xNzk4NiA5LjI1NDM1IDMgOS43MDcxMSAzSDE0LjI5MjlDMTQuNzQ1NiAzIDE1LjE3OTkgMy4xNzk4NiAxNS41IDMuNUMxNS44MjAxIDMuODIwMTQgMTYgNC4yNTQzNSAxNiA0LjcwNzExVjUuMDAwMDVNMTYgMTFIMTRNMTYgMTZIMTRNOCAxMUw5IDEyTDExIDEwTTggMTZMOSAxN0wxMSAxNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+" alt="Resume" />
   </a>
 </p>
 
  - Safety Lead
+ - Vision Lead
 
-## Extra Resources
-
-The class that this project is for requires some more documentation to be created for the class. This includes a video showing off our project, and a final report loosely based on the OACETT report guidelines
