@@ -34,7 +34,6 @@ The PLC program is the central controller of the inductor winding cell, handling
 This PLC program enables a flexible, fully automated process that adjusts to different inductor designs with minimal manual setup.
 
 ## HMI Design
-**See Design [here](../ENGINEERING/HMIDesign.pdf)**
 
 This HMI was designed with a strong focus on clarity, safety, and operator efficiency. The interface features a clean, intuitive layout with high-contrast visuals and standardized navigation, ensuring critical information like alarms, machine status, and production metrics are immediately visible. Alarm management is prioritized through a tiered system that highlights urgent issues and provides clear operator instructions. The HMI includes role-based access, preventing unauthorized changes while allowing technicians and engineers deeper access for diagnostics. Real-time trends, historical data, and customizable dashboards support both day-to-day operations and long-term optimization. Built with modular, scalable components, the design is easy to maintain and expand. Remote access and mobile compatibility offer flexibility for on-the-go monitoring, making this HMI both robust and user-friendly in a modern industrial environment.
 
@@ -112,7 +111,7 @@ Although there are "designations" under all of our photos that state a job, that
 ### Grant Maddock
 <a href="..\TeamInfo\Grant\Resume.pdf"><img src="..\TeamInfo\Grant\Portrait.JPG" alt="Grant Maddock" style="height:411px;"></a>
 <p>
-  <a href="mailto:paxtoncoghlin@gmail.com" title="Gmail">
+  <a href="mailto:grant.h.maddock@gmail.com" title="Gmail">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail" />
   </a>
   <a href="https://www.linkedin.com/in/grant-maddock-bb142b266/" title="Linkedin">

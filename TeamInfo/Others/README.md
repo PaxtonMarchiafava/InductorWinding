@@ -1,1 +1,0 @@
-These are resumes from the other groups that wanted a QR code on their HMI
