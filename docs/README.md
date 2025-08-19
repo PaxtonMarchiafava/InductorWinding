@@ -42,7 +42,7 @@ This HMI was designed with a strong focus on clarity, safety, and operator effic
 Our adhesive extruder that was meant to keep the inductor ended up having a pretty fatal flaw where after the adhesive was extruded it would not stick to the wire when being wound. There wasn't time to remedy this at the end of the project so we ended up just using zip ties.
 
 
-<img src="..\MEDIA\Complete.jpg" alt="Completed Inductor" width="600" />
+<img src="..\MEDIA\CompleteInductor.jpg" alt="Completed Inductor" width="600" />
 
 
 ## Extras
