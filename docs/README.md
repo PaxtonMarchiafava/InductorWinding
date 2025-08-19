@@ -37,6 +37,14 @@ This PLC program enables a flexible, fully automated process that adjusts to dif
 
 This HMI was designed with a strong focus on clarity, safety, and operator efficiency. The interface features a clean, intuitive layout with high-contrast visuals and standardized navigation, ensuring critical information like alarms, machine status, and production metrics are immediately visible. Alarm management is prioritized through a tiered system that highlights urgent issues and provides clear operator instructions. The HMI includes role-based access, preventing unauthorized changes while allowing technicians and engineers deeper access for diagnostics. Real-time trends, historical data, and customizable dashboards support both day-to-day operations and long-term optimization. Built with modular, scalable components, the design is easy to maintain and expand. Remote access and mobile compatibility offer flexibility for on-the-go monitoring, making this HMI both robust and user-friendly in a modern industrial environment.
 
+## Result
+
+Our adhesive extruder that was meant to keep the inductor ended up having a pretty fatal flaw where after the adhesive was extruded it would not stick to the wire when being wound. There wasn't time to remedy this at the end of the project so we ended up just using zip ties.
+
+
+<img src="..\MEDIA\Complete.jpg" alt="Completed Inductor" width="600" />
+
+
 ## Extras
 
 The class that this project is for requires some more documentation to be created. This includes a video showing off our project, and a final report loosely based on the OACETT report guidelines
